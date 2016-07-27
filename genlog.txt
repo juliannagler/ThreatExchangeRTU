@@ -1,0 +1,101 @@
+2016-07-26T17:45:46.142255+00:00 app[web.1]: )
+2016-07-26T17:45:46.143112+00:00 app[web.1]: [2016-07-26 17:45:46] myapp.INFO: Matched route "POST_get_update.php". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"POST_get_update.php"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/get_update.php"} []
+2016-07-26T17:45:46.142239+00:00 app[web.1]:     [object] => application
+2016-07-26T17:45:46.142269+00:00 app[web.1]: 
+2016-07-26T17:45:46.143322+00:00 app[web.1]: [2016-07-26 17:45:46] myapp.INFO: > POST /get_update.php [] []
+2016-07-26T17:45:46.143676+00:00 app[web.1]: 10.43.191.99 - - [26/Jul/2016:17:45:46 +0000] "POST /get_update.php HTTP/1.1" 200 2 "-" "Webhooks/1.0 (https://fb.me/webhooks)
+2016-07-26T17:45:46.124775+00:00 heroku[router]: at=info method=POST path="/get_update.php" host=webhooksthreatexchange.herokuapp.com request_id=c4a86d88-5be1-4cc9-9927-bfc187924de7 fwd="173.252.79.118" dyno=web.1 connect=1ms service=14ms status=200 bytes=196
+2016-07-26T17:48:39.566143+00:00 app[web.1]: Array
+2016-07-26T17:48:39.566157+00:00 app[web.1]: (
+2016-07-26T17:48:39.566068+00:00 app[web.1]: [2016-07-26 17:48:39] myapp.INFO: Matched route "POST_get_update.php". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"POST_get_update.php"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/get_update.php"} []
+2016-07-26T17:48:39.566124+00:00 app[web.1]: [26-Jul-2016 17:48:39 UTC] 
+2016-07-26T17:48:39.566642+00:00 app[web.1]:         (
+2016-07-26T17:48:39.566662+00:00 app[web.1]:             [0] => Array
+2016-07-26T17:48:39.566685+00:00 app[web.1]:                 (
+2016-07-26T17:48:39.567028+00:00 app[web.1]:                         )
+2016-07-26T17:48:39.566732+00:00 app[web.1]:                     [changes] => Array
+2016-07-26T17:48:39.566959+00:00 app[web.1]:                         (
+2016-07-26T17:48:39.566998+00:00 app[web.1]:                             [0] => 
+2016-07-26T17:48:39.566188+00:00 app[web.1]:     [entry] => Array
+2016-07-26T17:48:39.567029+00:00 app[web.1]: 
+2016-07-26T17:48:39.567092+00:00 app[web.1]:                     [id] => 1780260492209045
+2016-07-26T17:48:39.567154+00:00 app[web.1]:                     [time] => 1469555314
+2016-07-26T17:48:39.567177+00:00 app[web.1]:                 )
+2016-07-26T17:48:39.567178+00:00 app[web.1]: 
+2016-07-26T17:48:39.567197+00:00 app[web.1]:         )
+2016-07-26T17:48:39.567234+00:00 app[web.1]: )
+2016-07-26T17:48:39.567198+00:00 app[web.1]: 
+2016-07-26T17:48:39.567232+00:00 app[web.1]:     [object] => application
+2016-07-26T17:48:39.567235+00:00 app[web.1]: 
+2016-07-26T17:48:39.567452+00:00 app[web.1]: [2016-07-26 17:48:39] myapp.INFO: > POST /get_update.php [] []
+2016-07-26T17:48:39.567621+00:00 app[web.1]: [2016-07-26 17:48:39] myapp.INFO: < 200 [] []
+2016-07-26T17:48:39.567763+00:00 app[web.1]: 10.170.176.26 - - [26/Jul/2016:17:48:39 +0000] "POST /get_update.php HTTP/1.1" 200 2 "-" "Webhooks/1.0 (https://fb.me/webhooks)
+2016-07-26T18:20:48.012094+00:00 heroku[web.1]: Idling
+2016-07-26T18:20:48.012880+00:00 heroku[web.1]: State changed from up to down
+2016-07-26T18:20:51.862123+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-07-26T18:20:52.878396+00:00 app[web.1]: Going down, terminating child processes...
+2016-07-26T18:20:53.008970+00:00 heroku[web.1]: Process exited with status 143
+2016-07-26T18:25:19.501815+00:00 heroku[web.1]: Unidling
+2016-07-26T18:25:19.502170+00:00 heroku[web.1]: State changed from down to starting
+2016-07-26T18:25:20.604196+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2 web/`
+2016-07-26T18:25:22.321669+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2016-07-26T18:25:22.412331+00:00 app[web.1]: Starting php-fpm...
+2016-07-26T18:25:22.408828+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2016-07-26T18:25:22.308020+00:00 app[web.1]: DOCUMENT_ROOT changed to 'web/'
+2016-07-26T18:25:24.420024+00:00 app[web.1]: Starting httpd...
+2016-07-26T18:25:24.585845+00:00 heroku[web.1]: State changed from starting to up
+2016-07-26T18:25:25.529129+00:00 app[web.1]: [2016-07-26 18:25:25] myapp.INFO: > POST /get_update.php [] []
+2016-07-26T18:25:25.528974+00:00 app[web.1]: [2016-07-26 18:25:25] myapp.INFO: Matched route "POST_get_update.php". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"POST_get_update.php"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/get_update.php"} []
+2016-07-26T18:25:25.529162+00:00 app[web.1]: [26-Jul-2016 18:25:25 UTC] 
+2016-07-26T18:25:25.529177+00:00 app[web.1]: Array
+2016-07-26T18:25:25.529179+00:00 app[web.1]: (
+2016-07-26T18:25:25.529232+00:00 app[web.1]:         (
+2016-07-26T18:25:25.529213+00:00 app[web.1]:     [entry] => Array
+2016-07-26T18:25:25.529366+00:00 app[web.1]:                         (
+2016-07-26T18:25:25.529417+00:00 app[web.1]:                             [0] => Array
+2016-07-26T18:25:25.529288+00:00 app[web.1]:                 (
+2016-07-26T18:25:25.529265+00:00 app[web.1]:             [0] => Array
+2016-07-26T18:25:25.529332+00:00 app[web.1]:                     [changes] => Array
+2016-07-26T18:25:25.529685+00:00 app[web.1]:                                             [status] => UNKNOWN
+2016-07-26T18:25:25.529524+00:00 app[web.1]:                                     [field] => threat_descriptor
+2016-07-26T18:25:25.529460+00:00 app[web.1]:                                 (
+2016-07-26T18:25:25.529622+00:00 app[web.1]:                                         (
+2016-07-26T18:25:25.529574+00:00 app[web.1]:                                     [value] => Array
+2016-07-26T18:25:25.529962+00:00 app[web.1]:                                                     [type] => DOMAIN
+2016-07-26T18:25:25.529753+00:00 app[web.1]:                                             [indicator] => Array
+2016-07-26T18:25:25.529818+00:00 app[web.1]:                                                 (
+2016-07-26T18:25:25.529897+00:00 app[web.1]:                                                     [indicator] => evilevillabs.com
+2016-07-26T18:25:25.530324+00:00 app[web.1]:                                             [raw_indicator] => evilevillabs.com
+2016-07-26T18:25:25.530248+00:00 app[web.1]:                                             [share_level] => GREEN
+2016-07-26T18:25:25.530085+00:00 app[web.1]:                                                 )
+2016-07-26T18:25:25.530402+00:00 app[web.1]:                                             [owner] => Array
+2016-07-26T18:25:25.530029+00:00 app[web.1]:                                                     [id] => 1053174621373733
+2016-07-26T18:25:25.530085+00:00 app[web.1]: 
+2016-07-26T18:25:25.530159+00:00 app[web.1]:                                             [privacy_type] => VISIBLE
+2016-07-26T18:25:25.530460+00:00 app[web.1]:                                                 (
+2016-07-26T18:25:25.530532+00:00 app[web.1]:                                                     [id] => 1780260492209045
+2016-07-26T18:25:25.530796+00:00 app[web.1]:                                             [type] => DOMAIN
+2016-07-26T18:25:25.530732+00:00 app[web.1]:                                                 )
+2016-07-26T18:25:25.530600+00:00 app[web.1]:                                                     [name] => Webhooks TX
+2016-07-26T18:25:25.530733+00:00 app[web.1]: 
+2016-07-26T18:25:25.530688+00:00 app[web.1]:                                                     [email] => carmentang@fb.com
+2016-07-26T18:25:25.530873+00:00 app[web.1]:                                             [id] => 1349552655069260
+2016-07-26T18:25:25.531001+00:00 app[web.1]: 
+2016-07-26T18:25:25.530955+00:00 app[web.1]:                                             [added_on] => 2016-07-26T17:17:30+0000
+2016-07-26T18:25:25.531046+00:00 app[web.1]: 
+2016-07-26T18:25:25.531001+00:00 app[web.1]:                                         )
+2016-07-26T18:25:25.531045+00:00 app[web.1]:                                 )
+2016-07-26T18:25:25.531082+00:00 app[web.1]:                         )
+2016-07-26T18:25:25.531136+00:00 app[web.1]:                     [id] => 1780260492209045
+2016-07-26T18:25:25.531206+00:00 app[web.1]:                 )
+2016-07-26T18:25:25.531083+00:00 app[web.1]: 
+2016-07-26T18:25:25.531181+00:00 app[web.1]:                     [time] => 1469557513
+2016-07-26T18:25:25.531207+00:00 app[web.1]: 
+2016-07-26T18:25:25.531571+00:00 app[web.1]: 10.97.206.141 - - [26/Jul/2016:18:25:25 +0000] "POST /get_update.php HTTP/1.1" 200 2 "-" "Webhooks/1.0 (https://fb.me/webhooks)
+2016-07-26T18:25:25.531271+00:00 app[web.1]: )
+2016-07-26T18:25:25.531231+00:00 app[web.1]: 
+2016-07-26T18:25:25.531231+00:00 app[web.1]:         )
+2016-07-26T18:25:25.531269+00:00 app[web.1]:     [object] => application
+2016-07-26T18:25:25.531285+00:00 app[web.1]: 
+2016-07-26T18:25:25.531441+00:00 app[web.1]: [2016-07-26 18:25:25] myapp.INFO: < 200 [] []
+2016-07-26T18:25:25.586380+00:00 heroku[router]: at=info method=POST path="/get_update.php" host=webhooksthreatexchange.herokuapp.com request_id=02198e3d-67fc-4991-ac8f-8e602d016013 fwd="173.252.79.117" dyno=web.1 connect=1ms service=28ms status=200 bytes=196
