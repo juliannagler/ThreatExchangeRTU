@@ -27,6 +27,7 @@ $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
   //error_log(json_encode(json_decode($request->getContent()), JSON_PRETTY_PRINT));
+  echo $request->getContent();
   return 'ok';
 });
 
