@@ -98,4 +98,4 @@
 2016-07-26T18:25:25.531269+00:00 app[web.1]:     [object] => application
 2016-07-26T18:25:25.531285+00:00 app[web.1]: 
 2016-07-26T18:25:25.531441+00:00 app[web.1]: [2016-07-26 18:25:25] myapp.INFO: < 200 [] []
-2016-07-26T18:25:25.586380+00:00 heroku[router]: at=info method=POST path="/get_update.php" host=webhooksthreatexchange.herokuapp.com request_id=02198e3d-67fc-4991-ac8f-8e602d016013 fwd="173.252.79.117" dyno=web.1 connect=1ms service=28ms status=200 bytes=196
+2015-07-26T18:25:25.586380+00:00 heroku[router]: at=info method=POST path="/get_update.php" host=webhooksthreatexchange.herokuapp.com request_id=02198e3d-67fc-4991-ac8f-8e602d016013 fwd="173.252.79.117" dyno=web.1 connect=1ms service=28ms status=200 bytes=196

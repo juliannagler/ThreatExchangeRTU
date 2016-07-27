@@ -1,0 +1,101 @@
+2016-07-26T23:44:59.005580+00:00 app[web.1]: [2016-07-26 23:44:59] myapp.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /" (uncaught exception) at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php line 123 {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0): No route found for \"GET /\" at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php:123, Symfony\\Component\\Routing\\Exception\\ResourceNotFoundException(code: 0): No routes found for \"/\". at /app/vendor/symfony/routing/Matcher/UrlMatcher.php:98)"} []
+2016-07-26T23:44:59.005889+00:00 app[web.1]: 10.51.193.29 - - [26/Jul/2016:23:44:59 +0000] "GET / HTTP/1.1" 404 4534 "-" "curl/7.43.0
+2016-07-26T23:44:59.070848+00:00 heroku[router]: at=info method=GET path="/" host=webhooksthreatexchange.herokuapp.com request_id=6afa515f-8fd2-4091-9dfb-5e7542f4036f fwd="199.201.64.136" dyno=web.1 connect=7ms service=10ms status=404 bytes=4738
+2016-07-26T23:46:22.537318+00:00 app[web.1]: [2016-07-26 23:46:22] myapp.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /facebook" (uncaught exception) at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php line 123 {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0): No route found for \"GET /facebook\" at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php:123, Symfony\\Component\\Routing\\Exception\\ResourceNotFoundException(code: 0): No routes found for \"/facebook\". at /app/vendor/symfony/routing/Matcher/UrlMatcher.php:98)"} []
+2016-07-26T23:46:22.537452+00:00 app[web.1]: [2016-07-26 23:46:22] myapp.INFO: < 404 [] []
+2016-07-26T23:46:22.537561+00:00 app[web.1]: 10.7.144.239 - - [26/Jul/2016:23:46:22 +0000] "GET /facebook HTTP/1.1" 404 4534 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-26T23:46:22.567993+00:00 heroku[router]: at=info method=GET path="/facebook" host=webhooksthreatexchange.herokuapp.com request_id=510b6b1f-877a-42f4-8f96-7f557a665a29 fwd="199.201.64.136" dyno=web.1 connect=2ms service=4ms status=404 bytes=4738
+2016-07-26T23:49:04.829908+00:00 heroku[web.1]: Relocating dyno to a new server
+2016-07-26T23:49:04.840401+00:00 heroku[web.1]: State changed from down to starting
+2016-07-26T23:49:04.837891+00:00 heroku[web.1]: State changed from up to down
+2016-07-26T23:49:06.258135+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2 web/`
+2016-07-26T23:49:12.519244+00:00 app[web.1]: DOCUMENT_ROOT changed to 'web/'
+2016-07-26T23:49:12.533184+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2016-07-26T23:49:12.642807+00:00 app[web.1]: Starting php-fpm...
+2016-07-26T23:49:12.637633+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2016-07-26T23:49:14.644569+00:00 app[web.1]: Starting httpd...
+2016-07-26T23:49:14.965547+00:00 heroku[web.1]: State changed from starting to up
+2016-07-26T23:49:50.950832+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-07-26T23:49:57.751922+00:00 app[web.1]: Going down, terminating child processes...
+2016-07-26T23:49:57.880839+00:00 heroku[web.1]: Process exited with status 143
+2016-07-27T00:10:17.512743+00:00 heroku[slug-compiler]: Slug compilation started
+2016-07-27T00:10:17.512752+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-07-27T00:10:17.357773+00:00 heroku[api]: Deploy 6e84a63 by carmentang@fb.com
+2016-07-27T00:10:17.357842+00:00 heroku[api]: Release v12 created by carmentang@fb.com
+2016-07-27T00:10:17.754740+00:00 heroku[web.1]: Restarting
+2016-07-27T00:10:17.755402+00:00 heroku[web.1]: State changed from up to starting
+2016-07-27T00:10:18.902198+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2 web/`
+2016-07-27T00:10:20.274177+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-07-27T00:10:20.930752+00:00 app[web.1]: Going down, terminating child processes...
+2016-07-27T00:10:21.079945+00:00 heroku[web.1]: Process exited with status 143
+2016-07-27T00:10:21.901523+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2016-07-27T00:10:21.877873+00:00 app[web.1]: DOCUMENT_ROOT changed to 'web/'
+2016-07-27T00:10:22.059035+00:00 app[web.1]: Starting php-fpm...
+2016-07-27T00:10:22.054411+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2016-07-27T00:10:24.061686+00:00 app[web.1]: Starting httpd...
+2016-07-27T00:10:24.143456+00:00 heroku[web.1]: State changed from starting to up
+2016-07-27T00:10:34.332373+00:00 app[web.1]: [2016-07-27 00:10:34] myapp.INFO: > GET / [] []
+2016-07-27T00:10:34.357235+00:00 app[web.1]: [2016-07-27 00:10:34] myapp.INFO: < 200 [] []
+2016-07-27T00:10:34.332610+00:00 app[web.1]: [2016-07-27 00:10:34] myapp.DEBUG: logging output. [] []
+2016-07-27T00:10:34.332306+00:00 app[web.1]: [2016-07-27 00:10:34] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/"} []
+2016-07-27T00:10:34.358614+00:00 app[web.1]: 10.37.199.190 - - [27/Jul/2016:00:10:34 +0000] "GET / HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:10:34.876551+00:00 app[web.1]: 10.37.199.190 - - [27/Jul/2016:00:10:34 +0000] "GET /images/lang-logo.png HTTP/1.1" 200 1066 "https://webhooksthreatexchange.herokuapp.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:10:34.789329+00:00 app[web.1]: 10.37.199.190 - - [27/Jul/2016:00:10:34 +0000] "GET /stylesheets/main.css HTTP/1.1" 200 605 "https://webhooksthreatexchange.herokuapp.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:10:34.330325+00:00 heroku[router]: at=info method=GET path="/" host=webhooksthreatexchange.herokuapp.com request_id=bd29cf70-6067-425d-8e88-196acc4cc841 fwd="199.201.64.136" dyno=web.1 connect=1ms service=54ms status=200 bytes=7001
+2016-07-27T00:10:34.760023+00:00 heroku[router]: at=info method=GET path="/stylesheets/main.css" host=webhooksthreatexchange.herokuapp.com request_id=c715abc0-ee09-4bf4-aed9-ea6332b63957 fwd="199.201.64.136" dyno=web.1 connect=0ms service=1ms status=200 bytes=836
+2016-07-27T00:12:23.986140+00:00 app[web.1]: [2016-07-27 00:12:23] myapp.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /facebook" (uncaught exception) at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php line 123 {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0): No route found for \"GET /facebook\" at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php:123, Symfony\\Component\\Routing\\Exception\\ResourceNotFoundException(code: 0): No routes found for \"/facebook\". at /app/vendor/symfony/routing/Matcher/UrlMatcher.php:98)"} []
+2016-07-27T00:12:23.990218+00:00 app[web.1]: [2016-07-27 00:12:23] myapp.INFO: < 404 [] []
+2016-07-27T00:12:23.990223+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:23 +0000] "GET /facebook HTTP/1.1" 404 4534 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:23.972804+00:00 heroku[router]: at=info method=GET path="/facebook" host=webhooksthreatexchange.herokuapp.com request_id=0aad5d17-3de3-42a7-ab0a-b38e5052ea51 fwd="199.201.64.136" dyno=web.1 connect=1ms service=11ms status=404 bytes=4738
+2016-07-27T00:12:26.253232+00:00 app[web.1]: [2016-07-27 00:12:26] myapp.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /facebooksdfds" (uncaught exception) at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php line 123 {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0): No route found for \"GET /facebooksdfds\" at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php:123, Symfony\\Component\\Routing\\Exception\\ResourceNotFoundException(code: 0): No routes found for \"/facebooksdfds\". at /app/vendor/symfony/routing/Matcher/UrlMatcher.php:98)"} []
+2016-07-27T00:12:26.253422+00:00 app[web.1]: [2016-07-27 00:12:26] myapp.INFO: < 404 [] []
+2016-07-27T00:12:26.254043+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:26 +0000] "GET /facebooksdfds HTTP/1.1" 404 4534 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:27.890246+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:27 +0000] "GET / HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:27.880295+00:00 app[web.1]: [2016-07-27 00:12:27] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/"} []
+2016-07-27T00:12:27.882773+00:00 app[web.1]: [2016-07-27 00:12:27] myapp.INFO: > GET / [] []
+2016-07-27T00:12:27.883298+00:00 app[web.1]: [2016-07-27 00:12:27] myapp.DEBUG: logging output. [] []
+2016-07-27T00:12:27.889042+00:00 app[web.1]: [2016-07-27 00:12:27] myapp.INFO: < 200 [] []
+2016-07-27T00:12:28.169098+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:28 +0000] "GET /stylesheets/main.css HTTP/1.1" 304 - "https://webhooksthreatexchange.herokuapp.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:28.472107+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:28 +0000] "GET /images/lang-logo.png HTTP/1.1" 304 - "https://webhooksthreatexchange.herokuapp.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:26.237079+00:00 heroku[router]: at=info method=GET path="/facebooksdfds" host=webhooksthreatexchange.herokuapp.com request_id=bfbb7edb-08a9-47f8-ae46-eaeb729fe37d fwd="199.201.64.136" dyno=web.1 connect=1ms service=10ms status=404 bytes=4738
+2016-07-27T00:12:30.430616+00:00 app[web.1]: [2016-07-27 00:12:30] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/index.php/"} []
+2016-07-27T00:12:30.431113+00:00 app[web.1]: [2016-07-27 00:12:30] myapp.DEBUG: logging output. [] []
+2016-07-27T00:12:30.430929+00:00 app[web.1]: [2016-07-27 00:12:30] myapp.INFO: > GET /index.php [] []
+2016-07-27T00:12:30.433750+00:00 app[web.1]: [2016-07-27 00:12:30] myapp.INFO: < 200 [] []
+2016-07-27T00:12:30.434469+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:30 +0000] "GET /index.php HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:27.873413+00:00 heroku[router]: at=info method=GET path="/" host=webhooksthreatexchange.herokuapp.com request_id=27963a04-8a24-42f3-9f7d-9c5a1baa239d fwd="199.201.64.136" dyno=web.1 connect=1ms service=16ms status=200 bytes=7001
+2016-07-27T00:12:28.151783+00:00 heroku[router]: at=info method=GET path="/stylesheets/main.css" host=webhooksthreatexchange.herokuapp.com request_id=d1ace49b-ae7d-4ef3-8e64-b9beea76c548 fwd="199.201.64.136" dyno=web.1 connect=1ms service=2ms status=304 bytes=128
+2016-07-27T00:12:28.454763+00:00 heroku[router]: at=info method=GET path="/images/lang-logo.png" host=webhooksthreatexchange.herokuapp.com request_id=5652d6ec-cc49-4a35-a9a9-08b73174da65 fwd="199.201.64.136" dyno=web.1 connect=1ms service=1ms status=304 bytes=128
+2016-07-27T00:12:30.417825+00:00 heroku[router]: at=info method=GET path="/index.php" host=webhooksthreatexchange.herokuapp.com request_id=5f21c4a5-b653-43ee-addf-ffa8c0130e95 fwd="199.201.64.136" dyno=web.1 connect=1ms service=7ms status=200 bytes=7001
+2016-07-27T00:12:35.683417+00:00 app[web.1]: 10.67.206.220 - - [27/Jul/2016:00:12:35 +0000] "GET / HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:12:35.675548+00:00 app[web.1]: [2016-07-27 00:12:35] myapp.INFO: > GET / [] []
+2016-07-27T00:12:35.675720+00:00 app[web.1]: [2016-07-27 00:12:35] myapp.DEBUG: logging output. [] []
+2016-07-27T00:12:35.682402+00:00 app[web.1]: [2016-07-27 00:12:35] myapp.INFO: < 200 [] []
+2016-07-27T00:12:35.675356+00:00 app[web.1]: [2016-07-27 00:12:35] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/"} []
+2016-07-27T00:12:35.666596+00:00 heroku[router]: at=info method=GET path="/" host=webhooksthreatexchange.herokuapp.com request_id=6f782c4f-b949-4de9-bc0f-8602e697e6b7 fwd="199.201.64.136" dyno=web.1 connect=1ms service=12ms status=200 bytes=7001
+2016-07-27T00:24:19.348659+00:00 heroku[slug-compiler]: Slug compilation started
+2016-07-27T00:24:19.348664+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-07-27T00:24:19.187096+00:00 heroku[api]: Release v13 created by carmentang@fb.com
+2016-07-27T00:24:19.187022+00:00 heroku[api]: Deploy a702b37 by carmentang@fb.com
+2016-07-27T00:24:19.376825+00:00 heroku[web.1]: Restarting
+2016-07-27T00:24:19.377584+00:00 heroku[web.1]: State changed from up to starting
+2016-07-27T00:24:20.964853+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2 web/`
+2016-07-27T00:24:23.059861+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-07-27T00:24:23.871869+00:00 app[web.1]: Going down, terminating child processes...
+2016-07-27T00:24:23.952182+00:00 heroku[web.1]: Process exited with status 143
+2016-07-27T00:24:24.071172+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2016-07-27T00:24:24.230038+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2016-07-27T00:24:24.243394+00:00 app[web.1]: Starting php-fpm...
+2016-07-27T00:24:24.048294+00:00 app[web.1]: DOCUMENT_ROOT changed to 'web/'
+2016-07-27T00:24:26.245552+00:00 app[web.1]: Starting httpd...
+2016-07-27T00:24:26.470804+00:00 heroku[web.1]: State changed from starting to up
+2016-07-27T00:24:27.174335+00:00 app[web.1]: 10.137.144.23 - - [27/Jul/2016:00:24:27 +0000] "GET / HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:24:27.140834+00:00 app[web.1]: [2016-07-27 00:24:27] myapp.DEBUG: logging output. [] []
+2016-07-27T00:24:27.140534+00:00 app[web.1]: [2016-07-27 00:24:27] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://webhooksthreatexchange.herokuapp.com/"} []
+2016-07-27T00:24:27.172876+00:00 app[web.1]: [2016-07-27 00:24:27] myapp.INFO: < 200 [] []
+2016-07-27T00:24:27.140692+00:00 app[web.1]: [2016-07-27 00:24:27] myapp.INFO: > GET / [] []
+2016-07-27T00:24:27.526940+00:00 app[web.1]: 10.137.144.23 - - [27/Jul/2016:00:24:27 +0000] "GET /stylesheets/main.css HTTP/1.1" 200 605 "https://webhooksthreatexchange.herokuapp.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:24:27.614945+00:00 app[web.1]: 10.137.144.23 - - [27/Jul/2016:00:24:27 +0000] "GET /images/lang-logo.png HTTP/1.1" 200 1066 "https://webhooksthreatexchange.herokuapp.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+2016-07-27T00:24:27.191056+00:00 heroku[router]: at=info method=GET path="/" host=webhooksthreatexchange.herokuapp.com request_id=9f14701d-971e-48a0-9d55-7696452d439e fwd="199.201.64.136" dyno=web.1 connect=3ms service=70ms status=200 bytes=7001
+2016-07-27T00:24:27.631097+00:00 heroku[router]: at=info method=GET path="/images/lang-logo.png" host=webhooksthreatexchange.herokuapp.com request_id=af63e3cd-7d68-491b-8d40-c781d516df91 fwd="199.201.64.136" dyno=web.1 connect=1ms service=1ms status=200 bytes=1299
+2016-07-27T00:24:27.543132+00:00 heroku[router]: at=info method=GET path="/stylesheets/main.css" host=webhooksthreatexchange.herokuapp.com request_id=3c582b0e-bccc-466f-94b4-407cf43817d1 fwd="199.201.64.136" dyno=web.1 connect=1ms service=1ms status=200 bytes=836
