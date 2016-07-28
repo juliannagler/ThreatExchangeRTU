@@ -55,6 +55,7 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
   $file_name = __DIR__ . '/tx_info.txt';
   error_log("\n".$file_name);
   file_force_contents($file_name, print_r($ent_info));
+  file_force_contents($file_name, 'TESTTTTTT');
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
 });
