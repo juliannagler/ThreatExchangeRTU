@@ -35,7 +35,7 @@ $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component
 $ent_info = null;
 
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
-  $ent_info = var_dump(print_r(json_decode($request->getContent(), true)));
+  $ent_info = print_r(var_dump(json_decode($request->getContent(), true)));
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
