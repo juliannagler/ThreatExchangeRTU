@@ -42,7 +42,7 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
 });
 
 // Our web handlers
-$app->get('/get_update.php', function() use($app) {
+$app->post('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   error_log("\n"."@@@@@@@@@@@@@@@@@");
   error_log("\n\n".print_r($ent_info, true));
