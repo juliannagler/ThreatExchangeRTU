@@ -31,7 +31,11 @@ $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component
 });
 
 // receive webhooks update
+
+$ent_info = null;
+
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
+  $ent_info = json_decode($request->getContent(), true);
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
@@ -40,7 +44,7 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
 // Our web handlers
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('index.twig', array('ent_info' => print_r(json_decode($request->getContent(), true), true),)
+  return $app['twig']->render('index.twig', array('ent_info' => $ent_info,)
   );
 });
 
