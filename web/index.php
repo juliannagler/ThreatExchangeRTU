@@ -17,17 +17,16 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 // https://developers.facebook.com/docs/graph-api/webhooks#setup
 
-// try {
-//   $app->mkdir('/Users/carmentang/Desktop/TX_Info', 0700);
-// } catch(IOExeceptionInterface $e) {
-//   echo "An error occurred while creating your directors at ".$e->getPath();
-// }
+try {
+  $app->mkdir('/Users/carmentang/Desktop/TX_Info', 0700);
+} catch(IOExeceptionInterface $e) {
+  echo "An error occurred while creating your directors at ".$e->getPath();
+}
 
 // $app->touch('tx_tag.txt');
 
 // verification
 $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
-  //error_log(json_encode($request->query->keys());
   return $request->query->get('hub_challenge');
 });
 
