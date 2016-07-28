@@ -45,7 +45,7 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
   // $response = new JsonResponse();
   // $response->setContent(json_decode($request->getContent()));
   $ent_info = json_decode($request->getContent(), true);
-  error_log("\n%%%".print_r(json_decode($request->getContent(), true), true)."!!!!\n");
+  error_log("\n%%%".print_r(json_decode($request->getContent(), true), true)."@@@\n");
   $file_name = __DIR__ . '/tx_info.txt';
   error_log("\n".$file_name);
   file_force_contents($file_name, print_r($ent_info));
