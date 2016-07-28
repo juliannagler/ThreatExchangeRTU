@@ -19,7 +19,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 // verification
 $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
-  error_log("\n #################".print_r($request->query->get('hub_challenge'))."!!!!!!!!!!!!!!!!!!!!!!!\n");
   return $request->query->get('hub_challenge');
 });
 
@@ -44,14 +43,12 @@ function file_force_contents($filename, $data, $flags = 0){
 
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
   $ent_info = json_decode($request->getContent(), true);
-  error_log("\n".print_r(json_decode($request->getContent(), true), true));
+  error_log("\n%%%%%%%%%%%%%%%%".print_r(json_decode($request->getContent(), true), true)."!!!!!!!!!!!!!!!!!!!!!!!!\n");
   $file_name = __DIR__ . '/tx_info.txt';
   error_log("\n".$file_name);
   file_force_contents($file_name, print_r($ent_info));
   file_force_contents($file_name, 'TESTTTTTT');
-  error_log("\n @@@@@@@@@@@@@@@@@");
-  error_log("\n".$request->getPathInfo());
-  error_log("\n $$$$$$$$$$$$$$$$$");
+  error_log("\n@@@@@@@@@@@@@@@@@".$request->getPathInfo()."$$$$$$$$$$$$$$$$$\n");
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
 });
