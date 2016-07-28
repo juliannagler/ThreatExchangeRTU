@@ -46,7 +46,8 @@ function file_force_contents($dir, $contents){
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
   $ent_info = json_decode($request->getContent(), true);
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
-  file_put_contents(__DIR__ . '/HELLOWORLD_info.txt', print_r($ent_info));
+  $file_name = __DIR__ . '/tx_info.txt';
+  file_put_contents($file_name, print_r($ent_info));
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
 });
