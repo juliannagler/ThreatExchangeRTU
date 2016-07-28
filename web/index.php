@@ -49,7 +49,7 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
   error_log("\n".$file_name);
   file_force_contents($file_name, print_r($ent_info));
   file_force_contents($file_name, 'TESTTTTTT');
-  error_log("\n @@@@@@@@@@@@@@@@@";
+  error_log("\n @@@@@@@@@@@@@@@@@");
   error_log("\n".$request->getPathInfo());
   error_log("\n $$$$$$$$$$$$$$$$$");
   // $app->dumpFile('tx_tag.txt', $request->getContent());
