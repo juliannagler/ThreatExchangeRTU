@@ -40,7 +40,7 @@ function file_force_contents($dir, $contents){
     $dir = '';
     foreach($parts as $part)
         if(!is_dir($dir .= "/$part")) mkdir($dir);
-    file_put_contents("$dir/$file", $contents);
+    file_put_contents("../$dir/$file", $contents);
 }
 
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
