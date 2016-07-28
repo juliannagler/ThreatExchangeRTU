@@ -16,17 +16,10 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 // https://developers.facebook.com/docs/graph-api/webhooks#setup
-//
-// try {
-//   $app->mkdir('/Users/carmentang/Desktop/TX_Info', 0700);
-// } catch(IOExeceptionInterface $e) {
-//   echo "An error occurred while creating your directors at ".$e->getPath();
-// }
-
-// $app->touch('tx_tag.txt');
 
 // verification
 $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
+  error_log("\n #################".print_r($request->query->get('hub_challenge'))."!!!!!!!!!!!!!!!!!!!!!!!\n");
   return $request->query->get('hub_challenge');
 });
 
@@ -46,7 +39,7 @@ $ent_info = null;
 function file_force_contents($filename, $data, $flags = 0){
     if(!is_dir(dirname($filename)))
         mkdir(dirname($filename).'/', 0777, TRUE);
-    return file_put_contents($filename, $data,$flags);
+    return file_put_contents($filename, $data, $flags);
 }
 
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
@@ -54,9 +47,11 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
   $file_name = __DIR__ . '/tx_info.txt';
   error_log("\n".$file_name);
-  $fp = fopen($file_name, 'w');
-  fwrite($fp, '12345test');
-  fclose($fp);
+  file_force_contents($file_name, print_r($ent_info));
+  file_force_contents($file_name, 'TESTTTTTT');
+  error_log("\n @@@@@@@@@@@@@@@@@";
+  error_log("\n".$request->getPathInfo());
+  error_log("\n $$$$$$$$$$$$$$$$$");
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
 });
@@ -68,8 +63,7 @@ $app->get('/', function() use($app) {
   // error_log("\n"."@@@@@@@@@@@@@@@@@");
   // error_log("\n\n".print_r($ent_info, true));
   // error_log("\n"."$$$$$$$$$$$$$$$$$$");
-  return $app['twig']->render('index.twig', array('ent_info' => $ent_info,)
-  );
+  return $app['twig']->render('index.twig');
 });
 
 $app->run();
