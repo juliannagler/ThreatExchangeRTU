@@ -46,7 +46,7 @@ function file_force_contents($dir, $contents){
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
   $ent_info = json_decode($request->getContent(), true);
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
-  file_force_contents('threatexchange/tx_info.txt', $ent_info);
+  file_put_contents('../threatexchange/tx_info.txt', $ent_info);
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
 });
