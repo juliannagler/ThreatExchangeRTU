@@ -40,7 +40,10 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
 // Our web handlers
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render(json_decode($request_getContent()));
+  return $app['twig']->render(
+    'index.twig',
+    array('ent_info' => json_decode($request->getContent())
+  ));
 });
 
 $app->run();
