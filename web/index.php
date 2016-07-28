@@ -35,7 +35,9 @@ $app->get('/get_update.php', function (Silex\Application $app, Symfony\Component
 $ent_info = null;
 
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
-  $ent_info = print_r(json_decode($request->getContent(), true));
+  $contents = file_get_contents($request->getContent());
+  $contents = utf8_encode($contents);
+  $ent_info = print_r(var_dump(json_decode($contents, true)));
   error_log("\n".print_r(json_decode($request->getContent(), true), true));
   // $app->dumpFile('tx_tag.txt', $request->getContent());
   return 'ok';
@@ -44,7 +46,8 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
 // Our web handlers
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  error_log("\n"."@@@@@@@@@@@@@@@@@".print_r($ent_info, true));
+  error_log("\n"."@@@@@@@@@@@@@@@@@");
+  error_log(print_r($ent_info, true));
   error_log("\n"."$$$$$$$$$$$$$$$$$$");
   return $app['twig']->render('index.twig', array('ent_info' => $ent_info,)
   );
