@@ -42,8 +42,8 @@ function file_force_contents($filename, $data, $flags = 0){
 }
 
 $app->post('/get_update.php', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request) {
-  $response = new JsonResponse();
-  $response->setContent(json_decode($request->getContent()));
+  // $response = new JsonResponse();
+  // $response->setContent(json_decode($request->getContent()));
   $ent_info = json_decode($request->getContent(), true);
   error_log("\n%%%".print_r(json_decode($request->getContent(), true), true)."!!!!\n");
   $file_name = __DIR__ . '/tx_info.txt';
