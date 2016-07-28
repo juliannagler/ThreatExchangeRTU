@@ -42,7 +42,7 @@ $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render(
     'index.twig',
-    array('ent_info' => json_decode($request->getContent())
+    array('ent_info' => json_decode($request->getContent(), true)
   ));
 });
 
