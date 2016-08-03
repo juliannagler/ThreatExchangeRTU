@@ -37,9 +37,7 @@ $ent_info = null;
 */
 function file_force_contents($filename, $data, $flags = 0){
     if(!is_dir(dirname($filename)))
-        error_log("DOESSSITGOINNHEREE");
         mkdir(dirname($filename).'/', 0777, TRUE);
-    error_log("happy me!!!!!");
     return file_put_contents($filename, $data, $flags);
 }
 
@@ -48,7 +46,7 @@ $app->post('/get_update.php', function (Silex\Application $app, Symfony\Componen
   // $response->setContent(json_decode($request->getContent()));
   $ent_info = json_decode($request->getContent(), true);
   error_log("\n%%%".print_r(json_decode($request->getContent(), true), true)."@@@\n");
-  $file_name = '/tx_info.txt';
+  $file_name = '/tx_info.txt/';
   error_log("\n".$file_name." whoamI: ".exec('whoami')." ENDHERE!!");
   file_force_contents($file_name, print_r($ent_info, true));
   file_force_contents($file_name, 'TEST!!!');
