@@ -37,7 +37,9 @@ $ent_info = null;
 */
 function file_force_contents($filename, $data, $flags = 0){
     if(!is_dir(dirname($filename)))
+        error_log("DOESSSITGOINNHEREE");
         mkdir(dirname($filename).'/', 0777, TRUE);
+    error_log("happy me!!!!!");
     return file_put_contents($filename, $data, $flags);
 }
 
