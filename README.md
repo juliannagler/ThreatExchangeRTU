@@ -1,6 +1,6 @@
 #ThreatExchange Webhooks Subscription
 
-A third party Heroku server that will be notified whenever a threat descriptor or malware analysis is updated or created.
+An external server that will be notified whenever a threat descriptor or malware analysis is updated or created.
 
 #Steps
 1. Create a FB app and register it with ThreatExchange.
